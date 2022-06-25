@@ -3,3 +3,4 @@
 bot/.env
 /db/data/
 /bot/logs/
+idea/
