@@ -41,7 +41,6 @@ source app/.env
 | **psycopg2** | Working with PostgresSQL        |
 | **aiogram**  | Working with Telegram API       |
 | **logging**  | For logging                     |
-| **random**   | For generate random sequensence |
 | **dotenv**   | For get values from .env file   |
 
 ## Links
