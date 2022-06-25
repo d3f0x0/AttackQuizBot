@@ -1,0 +1,5 @@
+/venv/
+/attack.db
+bot/.env
+/db/data/
+/bot/logs/

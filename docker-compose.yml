@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  bot:
+    image: quiz_bot
+    restart: 'always'
+    build: ./bot
+    depends_on:
+      - db_quiz
+    volumes:
+      - './bot/logs:/opt/quiz_bot/logs'
+  db_quiz:
+    image: postgres_quiz
+    restart: 'unless-stopped'
+    build: ./db
+    environment:
+      POSTGRES_DB: "$POSTGRES_DB"
+      POSTGRES_USER: "$POSTGRES_NAME"
+      POSTGRES_PASSWORD: "$POSTGRES_PASSWORD"
+    ports:
+      - '5432:5432'
+    volumes:
+      - './db/data:/var/lib/postgresql/data'
